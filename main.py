@@ -26,7 +26,21 @@ class Mob(Sprite):
         self.rect.x += self.speedx
         self.rect.y += self.speedy
 
-def MobCollide
+def MobCollide(all_s):
+    mob: Mob
+    for i in all_s:
+        first = i
+        all_s.remove(first)
+        for j in all_s:
+            second = j
+            if first.rect.colliderect(second.rect):
+                first.speedx = -first.speedx
+                first.speedy = -first.speedy
+                second.speedx = -second.speedx
+                second.speedy = -second.speedy
+            first.update()
+            second.update()
+        all_s.add(first)
 
 
 def main():
@@ -62,6 +76,7 @@ def main():
 
         # Обновление
         all_spites.update()
+        MobCollide(all_spites)
 
         # Рендеринг
         screen.fill(s.BLACK)
