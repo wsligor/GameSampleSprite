@@ -11,8 +11,8 @@ class Settings:
         self.BLUE = (0, 0, 255)
 
         #Параметры экрана
-        self.WIDTH = 800
-        self.HEIGHT = 600
+        self.WIDTH = 1200
+        self.HEIGHT = 800
         self.FPS = 30
 
         # Каталог ресурсов игры
