@@ -11,9 +11,9 @@ class Settings:
         self.BLUE = (0, 0, 255)
 
         #Параметры экрана
-        self.WIDTH = 800
-        self.HEIGHT = 600
-        self.FPS = 30
+        self.WIDTH = 1600
+        self.HEIGHT = 800
+        self.FPS = 60
 
         # Каталог ресурсов игры
         self.game_folder = os.path.dirname(__file__)
